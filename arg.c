@@ -65,5 +65,13 @@ void main(int argc, char *argv[])    /* command line Arguments */
     
     printf("Wait for 5 seconds to exit.\n");
     sleep(5);
+    
+    /* https://www.tutorialspoint.com/c_standard_library/c_function_system.htm */
+    
+    system(str);
+    
+    return(0);
+    
+
 
 }
