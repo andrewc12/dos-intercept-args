@@ -3,18 +3,21 @@
  */
 #include <stdio.h>
 #include <dos.h>
+#include <string.h>
+
 void main(int argc, char *argv[])    /* command line Arguments */
 {
     int i;
+    int len;
     for (i = 0;i < argc;i++)
     {
         printf("%s ", argv[i]);        /* Printing the string */
-    }
-    printf("\n");
-    printf("Wait for 5 seconds to exit.\n");
-    sleep(5);
+        len = strlen(argv[i]);
+        printf("Length of |%s| is |%d|\n", argv[i], len);
+    }    
 
-    printf("argc %d \n", argc);
+
+    printf("Number of argc %d \n", argc);
     for (i = argc;i >= 0;i--)
     {
 	printf("%d \n", i);
