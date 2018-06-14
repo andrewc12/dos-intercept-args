@@ -31,7 +31,7 @@ void main(int argc, char *argv[])    /* command line Arguments */
 
     for (i = 0;i < strlen(argv[0]);i++)
     {
-	printf("%c ", argv[0]++);        /* Printing the string */
+	printf("%c ", argv[0][i]);        /* Printing the string */
     }
     printf("\n");
     printf("Wait for 5 seconds to exit.\n");
