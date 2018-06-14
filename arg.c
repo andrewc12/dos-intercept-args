@@ -9,6 +9,7 @@ void main(int argc, char *argv[])    /* command line Arguments */
 {
     int i;
     int len;
+    char str[1024];
     for (i = 0;i < argc;i++)
     {
         printf("%s ", argv[i]);        /* Printing the string */
@@ -38,6 +39,28 @@ void main(int argc, char *argv[])    /* command line Arguments */
         printf("Length of |%s| is |%d|\n", argv[i], len);
     }        
     
+    
+    /*  get  total length of string. use to see if bigger than buffer */
+    len = 0;
+    for (i = 0;i < argc;i++)
+    {
+        len = len + strlen(argv[i]);
+        printf("total Length is |%d|\n", len);
+    }  
+    len = len + 1;
+    
+    /* https://stackoverflow.com/questions/308695/how-do-i-concatenate-const-literal-strings-in-c */
+
+    if (len <= 1024){
+	    strcpy(str, argv[0]);
+        for (i = 1;i < argc;i++)
+        {
+            strcat(str, " ");
+            strcat(str, argv[i]);
+        }
+        printf("str is |%s|\n", str);
+	}
+
     
     
     printf("Wait for 5 seconds to exit.\n");
