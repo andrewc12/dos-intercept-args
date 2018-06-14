@@ -18,34 +18,12 @@ void main(int argc, char *argv[])    /* command line Arguments */
 
 
     printf("Number of argc %d \n", argc);
-    for (i = argc;i >= 0;i--)
-    {
-	printf("%d \n", i);
-	if (argv[i] == '.'){
-	    i--;
-	    printf("%s %d \n", argv[i], i);        /* Printing the string */
-	    argv[i] = '_'; /* Change last char before .extension to _ */
-	    break;
-	}
-    }
-
-    for (i = 0;i < strlen(argv[0]);i++)
-    {
-	printf("%c ", argv[0][i]);        /* Printing the string */
-    }
-    printf("\n");
-    
-    
-    
-    
-    
-    printf("Number of argc %d \n", argc);
     for (i = strlen(argv[0]);i >= 0;i--)
     {
-	printf("%d \n", i);
+	/*printf("%d \n", i);*/
 	if (argv[0][i] == '.'){
 	    i--;
-	    printf("%s %d \n", argv[i], i);        /* Printing the string */
+	    /*printf("%s %d \n", argv[i], i);        /* Printing the string */
 	    argv[0][i] = '_'; /* Change last char before .extension to _ */
 	    break;
 	}
